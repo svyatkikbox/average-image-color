@@ -1,0 +1,23 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "description": "simple determing of average color",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1",
+    "sass": "^1.32.6"
+  },
+  "keywords": [
+    "javascript",
+    "starter"
+  ],
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}

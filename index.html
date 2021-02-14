@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+</head>
+
+<!-- 
+    https://img5.goodfon.ru/original/2048x1365/d/fb/burunduk-zverek-orekh-gryzun-trapeza-suk-derevo-listia-fon-z.jpg
+    11 182 080
+
+    https://pbs.twimg.com/media/CVFgQGFWoAAdZQW.jpg
+    1 125 800
+
+    https://sun9-56.userapi.com/c841127/v841127393/74aec/ifYoCeIoLDk.jpg
+    16 800
+
+    https://posudaguide.ru/wp-content/uploads/2019/05/YAichnaya-skarlupa.jpg
+    failed to fetch
+
+    https://static.tildacdn.com/tild3232-3665-4337-a533-393631343433/-HandyCraft--_5105.jpg
+    crushed app
+
+   -->
+
+<body>
+  <div id="app">
+    <h1 class="heading mt-3">Get Average Color of Image</h1>
+    <input class="img-url mt-3" type="text" name="url" placeholder="Вставьте ссылку"
+      value="https://pbs.twimg.com/media/CVFgQGFWoAAdZQW.jpg" />
+
+    <div class="btn-group mt-2">
+
+      <button class="btn btn--text link-loader">
+        <div>
+          Download from link
+        </div>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px"
+          height="18px">
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path
+            d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z" />
+        </svg>
+      </button>
+
+      <label for="file-loader" class="btn btn-neu file-loader">
+        <div>
+          Browse files
+        </div>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path
+            d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z" />
+        </svg>
+        <input type="file" id="file-loader"></input>
+      </label>
+
+    </div>
+
+    <div class="img-preview mt-5"></div>
+
+    <div class="color-pallete mt-2">
+      <div class="color-circle"></div>
+      <div class="color-circle--2"></div>
+    </div>
+
+  </div>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
