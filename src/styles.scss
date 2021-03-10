@@ -24,8 +24,18 @@ body {
   align-items: center;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 .flex-flow-row-wrap {
   flex-flow: row wrap;
+}
+
+.flex-center {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
 }
 
 .mt-2 {
@@ -58,7 +68,7 @@ body {
 #app {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  @extend .align-items-center;
   justify-content: space-between;
 }
 
@@ -142,8 +152,8 @@ input[type='file'] {
 }
 
 .btn-group {
-  @extend.d-flex;
-  align-items: center;
+  @extend .d-flex;
+  @extend .align-items-center;
   justify-content: space-between;
 }
 
@@ -152,10 +162,15 @@ input[type='file'] {
   @extend .flex-flow-row-wrap;
 }
 
-.color-circle,
-.color-circle--2 {
-  border-radius: 50%;
+.color-circle {
   width: 100px;
   height: 100px;
-  @include convexShadowPattern;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  @extend .flex-center;
+}
+
+.color-code {
+  filter: invert(1);
 }
