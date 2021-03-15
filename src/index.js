@@ -5,7 +5,7 @@ import './styles.scss';
 
 const imgUrl = document.querySelector('.img-url');
 const linkLoader = document.querySelector('.link-loader');
-const imgPreview = document.querySelector('.img-preview');
+const imgPreview = document.querySelector('.img-preview-container');
 const fileLoader = document.querySelector('.file-loader');
 const fileInput = document.querySelector('#file-loader');
 const colorCircle = document.querySelector('.color-circle');
@@ -20,6 +20,10 @@ worker.onmessage = function (e) {
   console.log(r, g, b);
   showColor({ r, g, b });
 };
+
+imgUrl.addEventListener('change', function () {
+  this.value = this.value.trim();
+});
 
 function clearPreview(imgPreview) {
   while (imgPreview.firstChild) {
